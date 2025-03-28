@@ -35,9 +35,12 @@ vim.keymap.set("n", "<leader>7", "<C-w>7w")
 vim.keymap.set("n", "<leader>8", "<C-w>8w")
 vim.keymap.set("n", "<leader>9", "<C-w>9w")
 vim.keymap.set("n", "<leader>0", "<C-w>0w")
+vim.keymap.set("n", "<leader><C-i>", "<C-6>")
+vim.keymap.set("n", "<leader>z", ":SimpleZoomToggle<CR>")
 
 vim.keymap.set("n", "<leader>wh", ":split<CR>")
 vim.keymap.set("n", "<leader>ws", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>wd", ":q<CR>")
 
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
@@ -49,3 +52,6 @@ vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<CR>")
 vim.keymap.set("t", "<C-k>", "<cmd>wincmd k<CR>")
 vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<CR>")
+
+vim.keymap.set("n", "<leader>lc", ":e ~/.config/nvim/init.lua<CR>")
+vim.keymap.set("n", "<leader>lk", ":e ~/.config/nvim/lua/kidambim/remap.lua<CR>")
