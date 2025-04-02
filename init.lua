@@ -21,6 +21,7 @@ require("lazy").setup({
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
         "fasterius/simple-zoom.nvim",
         opts = {
