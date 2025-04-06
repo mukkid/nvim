@@ -21,7 +21,12 @@ require("lazy").setup({
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     {
         "fasterius/simple-zoom.nvim",
         opts = {
