@@ -25,7 +25,15 @@ require("lazy").setup({
         "folke/flash.nvim",
         event = "VeryLazy",
         ---@type Flash.Config
-        opts = {},
+        opts = {
+            modes = {
+                char = {
+                    highlight = {
+                        backdrop = false,
+                    },
+                },
+            },
+        },
         -- stylua: ignore
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
@@ -252,9 +260,9 @@ require("lazy").setup({
                 -- Add cmp_nvim_lsp capabilities settings to lspconfig
                 -- This should be executed before you configure any language server
                 lsp_defaults.capabilities = vim.tbl_deep_extend(
-                'force',
-                lsp_defaults.capabilities,
-                require('cmp_nvim_lsp').default_capabilities()
+                    'force',
+                    lsp_defaults.capabilities,
+                    require('cmp_nvim_lsp').default_capabilities()
                 )
 
                 -- LspAttach is where you enable features that only work
@@ -293,12 +301,12 @@ require("lazy").setup({
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank({
-      higroup = "IncSearch",
-      timeout = 100,
-    })
-  end
+    callback = function()
+        vim.highlight.on_yank({
+            higroup = "IncSearch",
+            timeout = 100,
+        })
+    end
 })
 
 -- Basic settings

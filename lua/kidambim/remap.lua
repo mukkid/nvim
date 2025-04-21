@@ -55,3 +55,9 @@ vim.keymap.set("t", "<C-l>", "<cmd>wincmd l<CR>")
 
 vim.keymap.set("n", "<leader>lc", ":e ~/.config/nvim/init.lua<CR>")
 vim.keymap.set("n", "<leader>lk", ":e ~/.config/nvim/lua/kidambim/remap.lua<CR>")
+local bufnr = vim.api.nvim_get_current_buf()
+if vim.lsp.inlay_hint then
+    vim.keymap.set("n", "<leader>L", function()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), { bufnr })
+    end)
+end
