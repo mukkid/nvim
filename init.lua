@@ -151,10 +151,9 @@ require("lazy").setup({
     },
 
     {
-        "rose-pine/neovim",
-        name = "rose-pine",  -- equivalent to 'as' in packer
+        "EdenEast/nightfox.nvim",
         config = function()
-            vim.cmd('colorscheme rose-pine')
+            vim.cmd('colorscheme carbonfox')
         end
     },
 

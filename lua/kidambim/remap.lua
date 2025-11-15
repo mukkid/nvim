@@ -33,6 +33,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>s", [["hy:%s/<C-r>h//g<left><left><left>]])
 vim.keymap.set("n", "<leader>[", "^/{<CR>a<CR><BS><Esc>O")
 
 
