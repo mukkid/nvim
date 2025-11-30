@@ -55,6 +55,8 @@ vim.keymap.set("n", "<leader>wh", ":split<CR>")
 vim.keymap.set("n", "<leader>ws", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>wd", ":q<CR>")
 
+vim.keymap.set("n", "<leader>gb", ":BlameToggle window<CR>")
+
 
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")

@@ -22,6 +22,13 @@ require("lazy").setup({
         -- this is equivalent to setup({}) function
     },
     {
+    "FabijanZulj/blame.nvim",
+    lazy = false,
+    config = function()
+      require('blame').setup {}
+    end,
+  },
+    {
         "rachartier/tiny-inline-diagnostic.nvim",
         event = "VeryLazy", -- Or `LspAttach`
         priority = 1000, -- needs to be loaded in first
